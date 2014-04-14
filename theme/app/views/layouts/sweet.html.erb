@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sweet Theme</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1">
+  <%= stylesheet_link_tag    "sweet", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <%= render "layouts/sweet/header" %>
+
+    <%= yield %>
+  </div>
+  
+  <footer class="sw_footer">
+    版权所有 广州港隆餐饮管理有限公司 Copyright © 2014 All Rights Reserved备案号：粤ICP备13009045号
+  </footer>
+
+  <%= javascript_include_tag "sweet", "data-turbolinks-track" => true %>
+  <%= yield :javascripts %>
+</body>
+</html>

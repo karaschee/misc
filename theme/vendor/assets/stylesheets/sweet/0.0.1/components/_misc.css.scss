@@ -1,0 +1,43 @@
+.sw_login {
+  border: 1px solid #eee;
+  padding: 15px;
+}
+
+
+// for homepage slide (require swiper.js)
+.sw_homeslide {
+  margin-bottom: 20px;
+  text-align: center;
+  background: #f8f8f8;
+  .swiper-container {
+    height: 445px;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.sw_homeslide_index {
+  line-height: 10px;
+  // overwrite
+  .swiper-pagination-switch {
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+  }
+  .swiper-active-switch {
+    border: none;
+  }
+  // new style
+  .swiper-pagination-switch {
+    display: inline-block;
+    width: 25%;
+    height: 10px;
+    background: #ffeae3;
+    cursor: pointer;
+  }
+  .swiper-active-switch {
+    background: #f7d2b9;
+  }
+}

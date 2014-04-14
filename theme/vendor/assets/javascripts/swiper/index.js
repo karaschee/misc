@@ -1,0 +1,1 @@
+//= require ./2.1.0/idangerous.swiper-2.1.min

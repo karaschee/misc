@@ -1,0 +1,39 @@
+<header class="sw_headerMobile">
+  <a href="javascript:;" class="sw_headerMobile_r" id="j_mnavBtn">
+    <span class="glyphicon glyphicon-cog"></span>
+  </a>
+
+  <%= link_to "#", class: "sw_headerMobile_l" do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  <% end %>
+
+  <%= link_to "Sweet", "#", class: "sw_headerMobile_logo" %>
+
+  <nav class="sw_headerMobile_r sw_headerMobile_nav" id="j_mnav">
+    <%= render "layouts/sweet/header_nav" %>
+  </nav>
+  
+</header>
+
+<header class="sw_header">
+  <h1 class="sw_logo">
+    <%= link_to sweet_home_url do %>
+      <%#= image_tag "" %>
+      Sweet
+    <% end %>
+  </h1>
+
+  <nav class="sw_nav">
+    <%= render "layouts/sweet/header_nav" %>
+  </nav>
+</header>
+
+<%= content_for(:javascripts) do %>
+  <script type="text/javascript">
+    $(function(){
+      $("#j_mnavBtn").click(function(){
+        $("#j_mnav").toggle();
+      });
+    });
+  </script>
+<% end %>
