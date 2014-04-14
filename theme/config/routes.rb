@@ -1,6 +1,8 @@
 Theme::Application.routes.draw do
 
   get 'sweet/home' => 'sweet#home'
+  get 'sweet/products' => 'sweet#products'
+  get 'sweet/articles' => 'sweet#articles'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

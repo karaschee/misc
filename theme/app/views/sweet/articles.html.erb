@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-sm-9">
+    <h2 class="sw_pageHeader">
+      资讯 <small>产业\公司新闻</small>
+    </h2>
+    <% @articles.each do |a| %>
+      <div class="sw_article">
+        <%= image_tag a[:thumb], class: "sw_article_thumb" %>
+        
+        <h3 class="sw_article_hd">
+          <a href="#"><%= a[:title] %></a>
+        </h3>
+          
+        <div class="sw_article_bd">
+          <p><%= a[:desc] %></p>
+          <p><a href="http://foodsense.is/blog/2012s-best-summer-cookbooks">继续阅读 »</a></p>  
+        </div>
+          
+        <div class="sw_article_ft">
+          <ul>
+            <li class="first">
+              <time datetime="2012-05-23T02:41-05:00" pubdate=""><span>2012</span> <em><%= a[:date] %></em></time>
+            </li>
+            <li>
+              <a href="http://foodsense.is/blog/2012s-best-summer-cookbooks#disqus_thread" data-disqus-identifier="256">
+                24 Comments
+              </a>
+            </li>
+            <li class="last"><a href="http://foodsense.is/blog/show/category/cook">Cook</a></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-sm-3">
+    <%= render "sweet/articles" %>
+  </div>
+</div>

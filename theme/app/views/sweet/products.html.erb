@@ -1,0 +1,41 @@
+
+<%= image_tag "sweet/page-header.jpg", class: "img-responsive sw_pageBanner" %> 
+
+<div class="row">
+  <div class="col-sm-3">
+    <h2 class="sw_stitle first">
+      产品分类
+    </h2>
+    <ul class="sw_listmenu">
+      <li><a href="#">凉粉系列</a></li>
+      <li><a href="#">吨品系列</a></li>
+      <li class="active"><a href="#">汤丸系列</a></li>
+      <li><a href="#">果盘系列</a></li>
+      <li><a href="#">芝麻糊系列</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-9">
+    <% @products.each do |p| %>
+      <div class="sw_product">
+        <%= link_to "#" do %>
+          <%= image_tag p[:thumb] %>
+        <% end %>
+        <div class="sw_product_content">
+          <h3 class="sw_product_title">
+            <%= link_to p[:title], "#"%> <span class="sw_product_price"> / ￥<%= p[:price] %></span>  
+          </h3>
+          <div class="sw_product_desc">
+            <p>
+              <%= p[:desc] %>
+            </p>
+            <p>
+              <a href="#" class="sw_button sw_button-i">
+                查看 &raquo;
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

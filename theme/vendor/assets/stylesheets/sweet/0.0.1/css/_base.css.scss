@@ -14,5 +14,8 @@ h6 {font-size:10px}
 
 h1,h2,h3,h4,h5,h6 {font-family: "Microsoft YaHei", sans-serif;}
 
+a { color: $g_main; }
+a:hover { color: $g_ored; }
+
 ul li a { color: #888; }
 ul li a:hover { color: #666; }

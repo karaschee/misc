@@ -33,18 +33,7 @@
       </form>
     </div>
 
-    <h2 class="sw_stitle">
-      <a href="#" class="more">更多 &raquo;</a>
-      产品资讯
-    </h2>
-    <ul class="sw_list">
-      <li> <a href="#"> 中小甜品店有何优势 </a></li>
-      <li> <a href="#"> 茗记甜品店如何做好卖场管理 </a></li>
-      <li> <a href="#"> 接手转让甜品店应该注意哪些 </a></li>
-      <li> <a href="#"> 茗记甜品店怎么衡量品牌形象 </a></li>
-      <li> <a href="#"> 茗记甜品店需知八条定律 </a></li>
-      <li> <a href="#"> 茗记甜品店领导者怎么提升凝聚 </a></li>
-    </ul>
+    <%= render "sweet/articles" %>
   </div>
   <div class="col-md-9">
     <h2 class="sw_mtitle first">产品展示</h2>
@@ -55,7 +44,7 @@
         <% end %>
         <div class="sw_product_content">
           <h3 class="sw_product_title">
-            <%= link_to p[:title], "#"%>
+            <%= link_to p[:title], "#"%> <span class="sw_product_price"> / ￥<%= p[:price] %></span>  
           </h3>
           <div class="sw_product_desc">
             <p>
@@ -63,7 +52,7 @@
             </p>
             <p>
               <a href="#" class="sw_button sw_button-i">
-                查看更多
+                查看 &raquo;
               </a>
             </p>
           </div>
