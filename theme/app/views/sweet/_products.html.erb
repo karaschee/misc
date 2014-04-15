@@ -5,14 +5,14 @@
     <% end %>
     <div class="sw_product_content">
       <h3 class="sw_product_title">
-        <%= link_to p[:title], sweet_product_url%> <span class="sw_product_price"> / ￥<%= p[:price] %></span>  
+        <span class="sw_product_price">￥<%= p[:price] %> /</span> <%= link_to p[:title], sweet_product_url%> 
       </h3>
       <div class="sw_product_desc">
-        <p>
+        <p class="sw_product_desc_main">
           <%= p[:desc] %>
         </p>
         <p>
-          <%= link_to "查看 &raquo;".html_safe, sweet_product_url, class: "sw_button sw_button-i" %>
+          <%= link_to "查看 &raquo;".html_safe, sweet_product_url, class: "more sw_button sw_button-i" %>
         </p>
       </div>
     </div>

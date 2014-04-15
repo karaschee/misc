@@ -92,8 +92,11 @@
   .sw_product_content {
     overflow: hidden;
     .sw_product_title {
-      margin: 10px 0 10px;
+      margin: 4px 0 10px;
       line-height: 1.3em;
+      height: 1.3em;
+      overflow: hidden;
+      font-size: 18px;
       a {
         color: $g_main;
         &:hover {
