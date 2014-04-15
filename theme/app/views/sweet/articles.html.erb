@@ -8,12 +8,14 @@
         <%= image_tag a[:thumb], class: "sw_article_thumb" %>
         
         <h3 class="sw_article_hd">
-          <a href="#"><%= a[:title] %></a>
+          <%= link_to a[:title], sweet_article_url %>
         </h3>
           
         <div class="sw_article_bd">
           <p><%= a[:desc] %></p>
-          <p><a href="http://foodsense.is/blog/2012s-best-summer-cookbooks">继续阅读 »</a></p>  
+          <p>
+            <%= link_to "继续阅读 »", sweet_article_url %>
+          </p>
         </div>
           
         <div class="sw_article_ft">

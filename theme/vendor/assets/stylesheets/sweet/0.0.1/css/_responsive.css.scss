@@ -12,11 +12,11 @@ $screen-lg: 1170px;
 
 // nav
 @media (max-width: $screen-sm) {
-  .sw_header { display: none; }
+  .sw_header_container { display: none; }
   .sw_headerMobile { display: block; }
 }
 @media (min-width: $screen-sm) {
-  .sw_header { display: block; }
+  .sw_header_container { display: block; }
   .sw_headerMobile { display: none; }
 }
 

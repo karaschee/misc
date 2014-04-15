@@ -15,18 +15,20 @@
   
 </header>
 
-<header class="sw_header">
-  <h1 class="sw_logo">
-    <%= link_to sweet_home_url do %>
-      <%#= image_tag "" %>
-      Sweet
-    <% end %>
-  </h1>
+<div class="container sw_header_container">
+  <header class="sw_header">
+    <h1 class="sw_logo">
+      <%= link_to sweet_home_url do %>
+        <%#= image_tag "" %>
+        Sweet
+      <% end %>
+    </h1>
 
-  <nav class="sw_nav">
-    <%= render "layouts/sweet/header_nav" %>
-  </nav>
-</header>
+    <nav class="sw_nav">
+      <%= render "layouts/sweet/header_nav" %>
+    </nav>
+  </header>
+</div>
 
 <%= content_for(:javascripts) do %>
   <script type="text/javascript">

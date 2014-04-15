@@ -1,0 +1,39 @@
+<% content_for :wrapper_before do %>
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="#">主页</a></li>
+      <li><a href="#">香甜系列</a></li>
+      <li class="active">干炸萝卜丝丸子</li>
+    </ol>
+  </div>
+
+  <div class="sw_productd">
+    <div class="sw_productd_hr"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="sw_productd_thumb">
+            <%= image_tag "sweet/0219_foodsense.jpg" %>
+          </div>
+          <div style="margin-top:20px;">
+            <%= render "sweet/jiathis" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="sw_productd_info">
+            <h2>干炸萝卜丝丸子</h2>
+            <p>售价：￥32</p>
+            <p>市场价：￥50</p>
+            <p>所属类别：<%= link_to "香甜系列", "#", class: "label label-primary" %></p>
+            <p class="sw_productd_info_desc">
+              干炸萝卜丝丸子，之所以干炸，我个人感觉比用面糊和的萝卜丝丸子更有吃萝卜的感觉，口感上感觉萝卜丝多能吃到萝卜。而用湿面糊炸的萝卜丝丸子感觉面一口咬下去，面多。纯个人喜好哈，不是标准。
+            </p>
+          </div>
+          <section>
+            干炸萝卜丝丸子，之所以干炸，我个人感觉比用面糊和的萝卜丝丸子更有吃萝卜的感觉，口感上感觉萝卜丝多能吃到萝卜。而用湿面糊炸的萝卜丝丸子感觉面一口咬下去，面多。纯个人喜好哈，不是标准。
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

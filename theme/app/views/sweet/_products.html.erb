@@ -1,0 +1,20 @@
+<% @products.each do |p| %>
+  <div class="sw_product">
+    <%= link_to sweet_product_url do %>
+      <%= image_tag p[:thumb] %>
+    <% end %>
+    <div class="sw_product_content">
+      <h3 class="sw_product_title">
+        <%= link_to p[:title], sweet_product_url%> <span class="sw_product_price"> / ￥<%= p[:price] %></span>  
+      </h3>
+      <div class="sw_product_desc">
+        <p>
+          <%= p[:desc] %>
+        </p>
+        <p>
+          <%= link_to "查看 &raquo;".html_safe, sweet_product_url, class: "sw_button sw_button-i" %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -8,9 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <%= render "layouts/sweet/header" %>
+  <%= render "layouts/sweet/header" %>
 
+  <%= yield :wrapper_before %>
+
+  <div class="container">
     <%= yield %>
   </div>
   
