@@ -74,13 +74,6 @@
 .sw_product {
   overflow: hidden;
   margin-bottom: 15px;
-  .sw_product_price {
-    font-size: 12px;
-    span {
-      margin-right: 5px;
-      color: $g_orange_pro1;
-    }
-  }
   img {
     float: left;
     width: 194px;
@@ -94,6 +87,13 @@
     box-shadow: 1px 1px 3px #F5F5F5;
     &:hover {
       opacity: .75;
+    }
+  }
+  .sw_product_price {
+    font-size: 12px;
+    span {
+      margin-right: 5px;
+      color: $g_orange_pro1;
     }
   }
   .sw_product_content {
