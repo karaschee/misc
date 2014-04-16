@@ -4,3 +4,11 @@
     color: $g_main !important;
   }
 }
+
+.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
+  color: $g_main !important;
+}
+
+.pagination > li > a, .pagination > li > span {
+  color: $g_main !important;
+}
