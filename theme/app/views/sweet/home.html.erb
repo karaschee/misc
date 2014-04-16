@@ -12,8 +12,45 @@
 </div>
 
 <div class="row">
-  <div class="col-md-3">
-    <div class="sw_login">
+  <div class="col-md-9 col-md-push-3">
+    <ul class="sw_homepanel">
+      <li>
+        <%= link_to "#" do %>
+          <span class="glyphicon glyphicon-comment"></span>
+          <p>会员中心</p>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <p>促销活动</p>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <span class="glyphicon glyphicon-heart-empty"></span>
+          <p>产品中心</p>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <span class="glyphicon glyphicon-phone-alt"></span>
+          <p>客服服务</p>
+        <% end %>
+      </li>
+    </ul>
+
+    <h2 class="sw_mtitle first">产品展示</h2>
+    <ul class="nav nav-tabs nav-sw">
+      <li class="active"><a href="#">新品上市</a></li>
+      <li><a href="#">精品推荐</a></li>
+    </ul>
+    <%= render "sweet/products" %>
+  </div>
+
+
+  <div class="col-md-3 col-md-pull-9">
+    <div class="sw_login hidden-xs">
       <form role="form">
         <div class="form-group">
           <!-- <label for="exampleInputEmail1">用户名</label> -->
@@ -34,10 +71,6 @@
     </div>
 
     <%= render "sweet/articles" %>
-  </div>
-  <div class="col-md-9">
-    <h2 class="sw_mtitle first">产品展示</h2>
-    <%= render "sweet/products" %>
   </div>
 </div>
 

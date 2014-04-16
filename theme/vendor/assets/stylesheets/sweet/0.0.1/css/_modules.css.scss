@@ -74,6 +74,13 @@
 .sw_product {
   overflow: hidden;
   margin-bottom: 15px;
+  .sw_product_price {
+    font-size: 12px;
+    span {
+      margin-right: 5px;
+      color: $g_orange_pro1;
+    }
+  }
   img {
     float: left;
     width: 194px;
@@ -104,9 +111,6 @@
         }
       }
     }
-    .sw_product_price {
-      color: $g_orange_pro1;
-    }
     .sw_product_desc {
       font-size: .875em;
       line-height: 1.45em;
@@ -118,6 +122,7 @@
   list-style: none;
   padding: 0;
   background: #f9f9f9;
+  margin-bottom: 15px;
   a {
     display: block;
     padding: 10px 20px;
@@ -194,6 +199,43 @@
       &.last {
         padding-right: 0;
         border-right: none;
+      }
+    }
+  }
+}
+
+.sw_homepanel {
+  overflow: hidden;
+  margin: 0 0 20px;
+  padding: 0;
+  border-top: 2px solid $g_orange_pro1;
+  font-size: 16px;
+  text-align: center;
+  list-style: none;
+
+  li {
+    float: left;
+    width: 25%;
+    &:nth-child(odd) a {
+      background: #fcfcfc;
+    }
+    a {
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      color: $g_main;
+      background: #f5f5f5;
+      span {
+        font-size: 25px;
+      }
+      p {
+        margin: 10px 0 0;
+        color: #888;
+      }
+      &:hover {
+        color: $g_ored;
+        background: #eee;
+        text-decoration: none;
       }
     }
   }

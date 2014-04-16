@@ -34,8 +34,39 @@ $screen-lg: 1170px;
 @media (max-width: $screen-md) {
   .sw_product {
     img {
-      width: 86px;
-      height: 57px;
+      width: 136px;
+      height: 91px;
+    }
+    .sw_product_content {
+      .sw_product_title {
+        font-size: 16px;
+        line-height: 1.1em;
+        height: 1.1em;
+      }
+    }
+  }
+}
+@media (max-width: $screen-sm) {
+  .sw_product {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #eee;
+    img {
+      width: 109px;
+      height: 79px;
+    }
+    &>.sw_product_price { 
+      display: block;
+      margin: 5px 0;
+      text-align: right;
+    }
+    &>.sw_product_content>.sw_product_desc>.sw_product_price { 
+      display: none;
+    }
+    .sw_product_content {
+      .sw_product_title {
+        margin: 0 0 5px;
+      }
     }
     .sw_product_content {
       .sw_product_desc_main {
@@ -49,19 +80,9 @@ $screen-lg: 1170px;
     }
   }
 }
-@media (max-width: $screen-md) {
-  .sw_product {
-    img {
-      width: 136px;
-      height: 91px;
-    }
-    .sw_product_content {
-      .sw_product_title {
-        font-size: 16px;
-        line-height: 1.1em;
-        height: 1.1em;
-      }
-    }
+@media (min-width: $screen-sm) {
+  .sw_product>.sw_product_price { 
+    display: none;
   }
 }
 
@@ -94,4 +115,53 @@ $screen-lg: 1170px;
   .sw_homeslide .swiper-container{
     height: 358px !important;
   } 
+}
+
+// home panel
+@media (max-width: $screen-sm) { 
+  .sw_homepanel {
+    margin: 15px 0;
+    font-size: 12px;
+    text-align: center;
+    list-style: none;
+
+    li {
+      a {
+        padding: 10px 0;
+        color: $g_main;
+        span {
+          font-size: 16px;
+        }
+        p {
+          margin: 5px 0;
+          color: #888;
+        }
+      }
+    }
+  }
+}
+
+
+// listmenu
+@media (max-width: $screen-sm) {
+  .sw_listmenu {
+    overflow: hidden;
+    a {
+      display: block;
+      padding: 10px 20px;
+      &:hover {
+        background: #f1f1f1;
+        text-decoration: none;
+      }
+    }
+    li.active a {
+      &:before {
+        content: "";
+        margin: 0;
+      }
+    }
+    li, a {
+      float: left;
+    }
+  }
 }

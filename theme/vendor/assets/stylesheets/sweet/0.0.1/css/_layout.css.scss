@@ -49,13 +49,13 @@
   position: relative;
   height: $h;
   margin-bottom: 10px;
-  line-height: $h+3;
+  line-height: $h;
   background: $g_main;
   color: #fff;
   text-align: center;
-
-  a {
-    color: #f6f6f6;
+  
+  * {
+    text-align: middle;
   }
 
   a.sw_headerMobile_l, a.sw_headerMobile_r {
@@ -75,6 +75,11 @@
   a.sw_headerMobile_r {
     float: right;
     margin-right: 5px;
+  }
+
+  .sw_headerMobile_logo img {
+    width: auto;
+    height: 30px;
   }
 
   nav.sw_headerMobile_nav {
@@ -109,5 +114,30 @@
         text-decoration: none;
       }
     }
+  }
+}
+.sw_headerMobile-reverse {
+  background: #fff;
+  color: $g_main;
+  border-bottom: 1px solid $g_main;
+  a.sw_headerMobile_l, a.sw_headerMobile_r {
+    color: $g_main;
+    &:hover {
+      color: $g_main;
+    }
+  }
+  &.sw_headerMobile-bordericon {
+    a.sw_headerMobile_l, a.sw_headerMobile_r {
+      border-color: $g_main;
+    }
+  }
+}
+.sw_headerMobile-bordericon {
+  a.sw_headerMobile_l, a.sw_headerMobile_r {
+    margin-top: 2px;
+    line-height: 1em;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 4px;
   }
 }

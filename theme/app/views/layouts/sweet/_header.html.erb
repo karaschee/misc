@@ -1,15 +1,21 @@
-<header class="sw_headerMobile">
-  <a href="javascript:;" class="sw_headerMobile_r" id="j_mnavBtn">
+<header class="sw_headerMobile sw_headerMobile-reverse sw_headerMobile-bordericon">
+<!--   <a href="javascript:;" class="sw_headerMobile_r" id="j_mnavBtn">
     <span class="glyphicon glyphicon-cog"></span>
+  </a> -->
+
+  <a href="javascript:;" class="sw_headerMobile_r" id="j_mnavBtn">
+    <span class="glyphicon glyphicon-user"></span>
   </a>
 
   <%= link_to "#", class: "sw_headerMobile_l" do %>
-    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="glyphicon glyphicon-th-list"></span>
   <% end %>
 
-  <%= link_to "诗味特甜品", "#", class: "sw_headerMobile_logo" %>
+  <%= link_to "#", class: "sw_headerMobile_logo" do %>
+    <%= image_tag "sweet/mobile-logo2-140x60.png" %>
+  <% end %>
 
-  <nav class="sw_headerMobile_r sw_headerMobile_nav" id="j_mnav">
+  <nav class="sw_headerMobile_nav" id="j_mnav">
     <%= render "layouts/sweet/header_nav" %>
   </nav>
   
