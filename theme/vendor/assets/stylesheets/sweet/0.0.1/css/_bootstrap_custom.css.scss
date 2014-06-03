@@ -6,9 +6,17 @@
 }
 
 .pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
-  color: $g_main !important;
+  // color: #fff !important;
+  background-color: $g_orange_lite1 !important;
+  // border-color: $g_orange_lite1 !important;
 }
 
 .pagination > li > a, .pagination > li > span {
   color: $g_main !important;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  color: #fff !important;
+  background-color: $g_main !important;
+  border-color: $g_main !important;
 }

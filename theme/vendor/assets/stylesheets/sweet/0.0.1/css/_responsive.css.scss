@@ -12,12 +12,32 @@ $screen-lg: 1170px;
 
 // nav
 @media (max-width: $screen-sm) {
-  .sw_header_container { display: none; }
-  .sw_headerMobile { display: block; }
+  .sw_header_container { display: none !important; }
+  .sw_headerMobile { display: block !important; }
 }
 @media (min-width: $screen-sm) {
-  .sw_header_container { display: block; }
-  .sw_headerMobile { display: none; }
+  .sw_header_container { display: block !important; }
+  .sw_headerMobile { display: none !important; }
+}
+@media (max-width: $screen-md) {
+  .sw_nav {
+    padding-top: 10px;
+    clear: both;
+  }
+  // .sw_nav {
+  //   margin-top: 17px;
+  //   a {
+  //     padding: 5px 10px;
+  //     font-size: 12px;
+  //   }
+  // }
+  // .sw_logo {
+  //   float: left;
+  //   margin-top: 5px;
+  //   img {
+  //     height: 50px;
+  //   }
+  // }
 }
 
 // product
@@ -82,13 +102,19 @@ $screen-lg: 1170px;
   .sw_article {
     .sw_article_thumb {
       // float: none;
-      margin: 10px 0 0 10px;
-      padding: 5px;
-      width: 100px;
+      // margin: 10px 0 5px 10px;
+      // padding: 5px;
+      // width: 160px;
+      display: none;
     }
     .sw_article_hd {
       font-size: 18px;
     }
+    .sw_article_bd p:first-child {
+      line-height: 1.5em;
+      height: 6em;
+      overflow: hidden;
+    }    
   }
 }
 
@@ -99,12 +125,17 @@ $screen-lg: 1170px;
     margin: 0 auto 10px;
   }
   .sw_homeslide .swiper-container{
-    height: 144px !important;
+    height: 114px !important;
   }
 }
 @media (min-width: $screen-sm) and (max-width: $screen-md) {
   .sw_homeslide .swiper-container{
-    height: 358px !important;
+    height: 284px !important;
+  } 
+}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .sw_homeslide .swiper-container{
+    height: 371px !important;
   } 
 }
 
@@ -127,6 +158,19 @@ $screen-lg: 1170px;
           margin: 5px 0;
           color: #888;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .sw_articled {
+    .sw_articled_ft {
+      p {
+        margin-bottom: 10px;
+      }
+      .sw_articled_ft_jiathis {
+        float: none;
       }
     }
   }

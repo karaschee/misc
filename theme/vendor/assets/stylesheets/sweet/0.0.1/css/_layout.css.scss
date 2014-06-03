@@ -1,4 +1,5 @@
 .sw_footer {
+  font-size: 12px;
   text-align: center;
   border-top: 2px solid #e5e5e5;
   margin-top: 40px;
@@ -8,6 +9,7 @@
 .sw_header {
   overflow: hidden;
   margin: 30px 0 20px;
+  padding: 1px;
 }
 
 .sw_logo {
@@ -19,8 +21,22 @@
   }
 }
 
+.sw_header_login {
+  float: right;
+  margin-top: 20px;
+  font-size: 12px;
+
+  span {
+    padding: 0 10px;
+    border-left: 1px solid #dbdbdb;
+    &:first-child {
+      border: none;
+    }
+  }
+}
+
 .sw_nav {
-  clear: right;
+  margin-top: 10px;
   overflow: hidden;
   ul {
     list-style: none;
@@ -64,6 +80,9 @@
     font-size: 18px;
     &:hover {
       color: #fff;
+    }
+    &:active {
+      color: #f9f9f9;
     }
   }
 
@@ -124,6 +143,9 @@
     color: $g_main;
     &:hover {
       color: $g_main;
+    }
+    &:active {
+      color: $g_orange_pro1;
     }
   }
   &.sw_headerMobile-bordericon {

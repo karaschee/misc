@@ -1,16 +1,50 @@
 .sw_login {
-  border: 1px solid #eee;
+  font-size: 12px;
   padding: 15px;
+  border: 1px solid #dbdbdb;
+  border-bottom-width: 3px;
+  background: #fcfcfc;
+  p span {
+    margin-right: 10px;
+  }
 }
 
 
 // for homepage slide (require swiper.js)
 .sw_homeslide {
+  $npl: 36px;
+  position: relative;
   margin-bottom: 20px;
   text-align: center;
   background: #f8f8f8;
   .swiper-container {
-    height: 445px;
+    height: 450px;
+  }
+  .sw_homeslide_prev, .sw_homeslide_next {
+    position: absolute;
+    top: 50%;
+    width: $npl;
+    height: $npl;
+    margin-top: -$npl/2;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    line-height: $npl;
+    color: #ccc;
+    text-decoration: none;
+    &:hover {
+      background: #ccc;
+      color: #fff;
+    }
+    &:active {
+      background: #aaa;
+      color: #fff;
+    }
+  }
+  .sw_homeslide_prev {
+    left: -$npl*1.5;
+  }
+  .sw_homeslide_next {
+    right: -$npl*1.5;
   }
   img {
     max-width: 100%;

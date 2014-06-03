@@ -1,3 +1,8 @@
+html, body {
+  overflow-x: hidden;
+  font-family: "Microsoft YaHei", sans-serif; 
+}
+
 body {
   color: #888;
 }
@@ -19,3 +24,7 @@ a:hover { color: $g_ored; }
 
 ul li a { color: #888; }
 ul li a:hover { color: #666; }
+
+.f12 {
+  font-size: 12px;
+}
