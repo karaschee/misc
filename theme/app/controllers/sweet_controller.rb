@@ -12,6 +12,7 @@ class SweetController < ApplicationController
   def articles
   end
 
+
   def get_data
     @products = [
       {
