@@ -1,0 +1,6 @@
+this theme require:
+swiper.js
+normalize.css
+
+prefix:
+m : mobile

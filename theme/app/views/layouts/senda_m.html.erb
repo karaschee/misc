@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>senda mobile mockup</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1">
+  <%= stylesheet_link_tag "senda_m", media: "all", "data-turbolinks-track" => true %>
+  <%= yield :stylesheets %>
+</head>
+
+<body>
+  <% unless content_for?(:hide_nav) %>
+    <nav class="m_nav">
+      <ul>
+        <li>
+          <a href="javascript:history.back();">后退</a>
+        </li>
+        <li>
+          <a href="#">首页</a>
+        </li>
+      </ul>
+    </nav>
+  <% end %>
+
+  <div class="m_wrapper">
+    <%= yield %>
+  </div>
+
+  <footer class="m_footer">
+    <p class="m_footer_nav">
+      <a href="#">产品推荐</a> |
+      <a href="#">活动信息</a> |
+      <a href="#">品牌故事</a> |
+      <a href="#">线下体验</a>
+    </p>
+    <p class="m_footer_copyright">© 2014 森达博轩. All Rights Reserved.</p>
+  </footer>
+
+  <%= javascript_include_tag "senda_m", "data-turbolinks-track" => true %>
+  <%= yield :javascripts %>
+</body>
+</html>

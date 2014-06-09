@@ -1,0 +1,74 @@
+<div class="m_slider">
+  <div class="swiper-container" id="j_homeslide">
+    <div class="swiper-wrapper">
+      <% ['0052_foodsense.jpg', '0140_foodsense.jpg', '0219_foodsense.jpg', '0232_foodsense.jpg'].each do |picture| %>
+        <div class="swiper-slide">
+          <%= image_tag 'sweet/'+picture %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="j_homeslideindex" class="m_slider_index"></div>
+</div>
+
+<div class="m_menu">
+  <ul>
+    <li class="m_menu_1">
+      <a href="#">
+        <span>
+          <b>
+            <i class="fa fa-git"></i>
+          </b>
+        </span><br> 产品推荐
+      </a>
+    </li>
+
+    <li class="m_menu_2">
+      <a href="#">
+        <span>
+          <b>
+            <i class="fa fa-git"></i>
+          </b>
+        </span><br> 活动信息
+      </a>
+    </li>
+
+    <li class="m_menu_3">
+      <a href="#">
+        <span>
+          <b>
+            <i class="fa fa-git"></i>
+          </b>
+        </span><br> 品牌故事
+      </a>
+    </li>
+
+    <li class="m_menu_4">
+      <a href="#">
+        <span>
+          <b>
+            <i class="fa fa-git"></i>
+          </b>
+        </span><br> 线下体验
+      </a>
+    </li>
+  </ul>
+</div>
+
+<% content_for(:javascripts) do %>
+  <script type="text/javascript">
+    $(function(){
+      var swiper = $('#j_homeslide');
+      // swiper.css('height', $(window).height()/3);
+
+      var mySwiper = new Swiper('#j_homeslide',{
+        pagination: '#j_homeslideindex',
+        loop:true,
+        grabCursor: true,
+        paginationClickable: true
+      });
+    });
+  </script>
+<% end %>
+
+<% content_for :hide_nav, true %>

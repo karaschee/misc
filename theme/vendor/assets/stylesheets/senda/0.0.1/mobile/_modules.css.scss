@@ -1,0 +1,92 @@
+.m_menu {
+  text-align: center;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  li, a {
+    float: left;
+  }
+  li {
+    width: 50%;
+    &:nth-child(2) a, &:nth-child(3) a {
+      background: #fafafa;
+    }
+
+    &.m_menu_1 b {
+      background: $g_main;
+    }
+    &.m_menu_2 b {
+      background: #8fba06;
+    }
+    &.m_menu_3 b {
+      background: #eb778e;
+    }
+    &.m_menu_4 b {
+      background: #6cc2a0;
+    }
+  }
+  a {
+    width: 100%;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+
+    &:hover {
+      background: #fff !important;
+    }
+    span, b {
+      display: inline-block;
+      border-radius: 999px;
+    }
+    span {
+      border: 1px solid #d8d8d8;
+      background: #fff;
+      padding: 4px;
+      margin-bottom: 10px;
+    }
+    b {
+      background: red;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0;
+      color: #fff;
+    }
+  }
+}
+
+// for homepage slide (require swiper.js)
+.m_slider {
+  $npl: 36px;
+  position: relative;
+  text-align: center;
+  background: #f8f8f8;
+  .swiper-container {
+    height: 230px;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.m_slider_index {
+  position: absolute;
+  z-index: 1;
+  bottom: 17px;
+  text-align: center;
+  width: 100%;
+  // overwrite swiper.js css
+  .swiper-pagination-switch {
+    // border-radius: 0;
+    border: none;
+    background: #fff;
+    margin: 0 10px;
+  }
+  .swiper-active-switch {
+    background: $g_main;
+  }
+}

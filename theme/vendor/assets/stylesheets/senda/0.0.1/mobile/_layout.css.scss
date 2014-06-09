@@ -1,0 +1,19 @@
+.m_wrapper {
+  background: #f2f2f2;
+}
+
+.m_footer {
+  padding: 18px 0;
+  text-align: center;
+
+  .m_footer_nav {
+    a {
+      text-decoration: none;
+      margin: 0 3px;
+    }
+  }
+  .m_footer_copyright {
+    font-size: 12px;
+    color: #808080;
+  }
+}

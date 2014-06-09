@@ -1,0 +1,10 @@
+this theme require:
+swiper
+bootstrap
+
+prefix:
+sw : sweet(theme name) 
+
+globe public class:
+sw_errorField
+sw_helpBlock

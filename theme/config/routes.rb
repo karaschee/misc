@@ -1,5 +1,10 @@
 Theme::Application.routes.draw do
 
+  get "senda_m/home"
+  get "senda_m/products"
+  get "senda_m/active"
+  get "senda_m/story"
+  get "senda_m/experience"
   get 'sweet/home' => 'sweet#home'
   get 'sweet/products' => 'sweet#products'
   get 'sweet/articles' => 'sweet#articles'
