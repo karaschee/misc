@@ -1,2 +1,10 @@
-<h1>SendaM#products</h1>
-<p>Find me in app/views/senda_m/products.html.erb</p>
+<ul class="m_products">
+  <% [1,2].each do |thing| %>
+    <li>
+      <a href="#">
+        <%= image_tag 'sweet/0140_foodsense.jpg' %>
+        <h3>X战警主题卧室</h3>
+      </a>
+    </li>
+  <% end %>
+</ul>

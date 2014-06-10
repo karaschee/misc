@@ -17,7 +17,7 @@
       <a href="#">
         <span>
           <b>
-            <i class="fa fa-git"></i>
+            <i class="fa fa-home"></i>
           </b>
         </span><br> 产品推荐
       </a>
@@ -27,7 +27,7 @@
       <a href="#">
         <span>
           <b>
-            <i class="fa fa-git"></i>
+            <i class="fa fa-bullhorn"></i>
           </b>
         </span><br> 活动信息
       </a>
@@ -37,7 +37,7 @@
       <a href="#">
         <span>
           <b>
-            <i class="fa fa-git"></i>
+            <i class="fa fa-comment-o"></i>
           </b>
         </span><br> 品牌故事
       </a>
@@ -47,13 +47,22 @@
       <a href="#">
         <span>
           <b>
-            <i class="fa fa-git"></i>
+            <i class="fa fa-tags"></i>
           </b>
         </span><br> 线下体验
       </a>
     </li>
   </ul>
 </div>
+
+<%= content_for :stylesheets do %>
+  <style type="text/css">
+    .m_wrapper {
+      padding: 0;
+    }
+  </style>
+<% end %>
+  
 
 <% content_for(:javascripts) do %>
   <script type="text/javascript">
