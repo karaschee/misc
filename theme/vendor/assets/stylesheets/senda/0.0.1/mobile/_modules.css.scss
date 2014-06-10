@@ -1,9 +1,7 @@
 .m_menu {
   text-align: center;
   ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    @include clearlist;
     overflow: hidden;
   }
   li, a {
@@ -96,9 +94,7 @@
 }
 
 .m_products {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include clearlist;
 
   li {
     border-radius: 10px;

@@ -1,0 +1,70 @@
+.header {
+  margin-top: 10px;
+  line-height: 60px;
+  height: 60px;
+  background: $g_main;
+  font-family: "Microsoft YaHei", sans-serif;
+
+  .header_logo {
+    float: left;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+
+    img {
+      display: block;
+      margin: 4px 10px;
+      height: 52px;
+    }
+  }
+  .header_nav {
+    @include clearlist;
+
+    li.header_nav_item, a.header_nav_item_link {
+      float: left;
+    }
+    li.header_nav_item {
+      border-right: 1px #fc887c solid;
+      // border-left: 1px #fc887c solid;
+      &.first {
+        border-left: none;
+      }
+      &.last {
+        // border-right: none;
+      }
+      a.header_nav_item_link {
+        display: block;
+        position: relative;
+        text-align: center;
+        color: #fff;
+        width: 120px;
+
+        &:hover ul {
+          top: 60px;
+        }
+        ul {
+          @include clearlist;
+          position: absolute;
+          top: -9999px;
+          width: 100%;
+          background: #303030;
+
+          a {
+            display: block;
+            color: #fff;
+            line-height: 3;
+            border-bottom: 1px solid #222;
+            &:hover {
+              background: #444;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.innerCenter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}

@@ -1,4 +1,6 @@
-class SendaController < ApplicationController
+class SendaPcController < ApplicationController
+  layout "senda_pc"
+
   def home
   end
 

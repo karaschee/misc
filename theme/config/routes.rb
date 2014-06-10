@@ -1,5 +1,9 @@
 Theme::Application.routes.draw do
 
+  get "senda_pc/home"
+  get "senda_pc/products"
+  get "senda_pc/product"
+  get "senda_pc/experience"
   get "senda/home"
   get "senda/products"
   get "senda/product"
