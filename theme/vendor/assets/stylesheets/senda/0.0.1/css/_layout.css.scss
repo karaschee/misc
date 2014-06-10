@@ -1,6 +1,5 @@
 .header {
-  margin-top: 10px;
-  line-height: 60px;
+  // margin-top: 10px;
   height: 60px;
   background: $g_main;
   font-family: "Microsoft YaHei", sans-serif;
@@ -29,15 +28,32 @@
         border-left: none;
       }
       &.last {
+        float: none;
+        overflow: hidden;
+        background: #cc3e30;
         // border-right: none;
+        font-weight: bolder;
+
+        a.header_nav_item_link {
+          width: 100%;
+        }
       }
       a.header_nav_item_link {
         display: block;
         position: relative;
         text-align: center;
         color: #fff;
-        width: 120px;
+        width: 150px;
+        padding: 10px 0;
+        line-height: 25px;
 
+        span {
+          display: block;
+          font-size: 12px;
+          color: #f87c70;
+          line-height: 15px;
+          font-family: Verdana, sans-serif;
+        }
         &:hover ul {
           top: 60px;
         }
@@ -47,7 +63,11 @@
           top: -9999px;
           width: 100%;
           background: #303030;
+          background: rgba(48, 48, 48, .95);
 
+          li:first-child a {
+            border-top: 1px solid #222;
+          }
           a {
             display: block;
             color: #fff;
