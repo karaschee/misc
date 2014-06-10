@@ -54,8 +54,11 @@
           line-height: 15px;
           font-family: Verdana, sans-serif;
         }
-        &:hover ul {
-          top: 60px;
+        &:hover {
+          background: #8a2c22;
+          ul {
+            top: 60px;
+          }
         }
         ul {
           @include clearlist;
