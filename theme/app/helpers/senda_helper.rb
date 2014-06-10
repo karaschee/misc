@@ -1,0 +1,2 @@
+module SendaHelper
+end
