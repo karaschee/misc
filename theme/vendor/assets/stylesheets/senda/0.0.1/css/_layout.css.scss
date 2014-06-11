@@ -1,5 +1,5 @@
 .header {
-  margin-top: 20px;
+  margin: 20px 0;
   height: 60px;
   background: $g_main;
   font-family: "Microsoft YaHei", sans-serif;
@@ -94,6 +94,9 @@
 
 .footer {
   margin: 50px 20px 0;
-  padding: 20px;
+  padding: 20px 0 50px;
   border-top: 1px solid #ddd;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
 }
