@@ -1,0 +1,27 @@
+$light-black: color-stops(#FFF,#F00,#00C);
+
+.homeShow {
+  @include clearlist;
+  _zoom: 1;
+  overflow: hidden;
+  margin: 20px -5px 0;
+  
+  li {
+    _display: inline;
+    float: left;
+    width: 232.5px;
+    margin: 0 5px;
+    height: 400px;
+    background: $light-black;
+
+    h2.homeShow_hd {
+      strong {
+        display: block;
+        border-left: 3px solid $g_main;
+      }
+      span {
+
+      }
+    }
+  }
+}

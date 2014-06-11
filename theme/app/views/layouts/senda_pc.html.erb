@@ -58,9 +58,17 @@
     </div>
   </div>
 
+  <%= yield :before_wrapper %>
+
   <div class="wrapper">
     <div class="innerCenter">
       <%= yield %>
+    </div>
+  </div>
+
+  <div class="innerCenter">
+    <div class="footer">
+      
     </div>
   </div>
 
