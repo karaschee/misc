@@ -1,13 +1,15 @@
 .header {
-  margin: 20px 0;
+  margin: 5px 0 20px;
   height: 60px;
   background: $g_main;
   font-family: "Microsoft YaHei", sans-serif;
 
   .header_logo {
     float: left;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
+    // background: #202020;
+    padding: 0 10px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
 
     img {
       display: block;
@@ -22,7 +24,7 @@
       float: left;
     }
     li.header_nav_item {
-      border-right: 1px #fc887c solid;
+      border-right: 1px #d6604d solid;
       // border-left: 1px #fc887c solid;
       &.first {
         border-left: none;
@@ -30,7 +32,7 @@
       &.last {
         float: none;
         overflow: hidden;
-        background: #cc3e30;
+        background: #67001f;
         // border-right: none;
         font-weight: bolder;
 
@@ -50,12 +52,12 @@
         span {
           display: block;
           font-size: 12px;
-          color: #f87c70;
+          color: #d6604d;
           line-height: 15px;
-          font-family: Verdana, sans-serif;
+          font-family: "Courier New", sans-serif;
         }
         &:hover {
-          background: #8a2c22;
+          background: #72111d;
           ul {
             top: 60px;
           }
@@ -100,3 +102,60 @@
   line-height: 2;
   text-align: center;
 }
+
+/* layout new way */
+.layout { 
+  &:before,
+  &:after,
+  .main:after {
+    content:"x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x";
+    font-size:xx-large;  
+    display:block; 
+    height:0;
+    line-height:0;
+    overflow:hidden;  
+    visibility:hidden;
+  }
+  &:after, .main:after { clear:both; }
+  & { zoom:1; } /* IE 5.5/6/7 */
+
+  .main { 
+    *zoom:1;
+    display:table-cell;
+    *display:block;
+    width:auto;
+  }
+  /* main box can't be capped at fixed width when using display:table-cell; */
+  /* so main-b is geared to this situation */
+  .main-b {
+    display: block;
+    overflow: hidden;
+  }
+  .main-products {
+    border-right: 1px solid $g_main;
+  }
+
+  .lCol {
+    float:left;
+    margin-right:20px;
+    _margin-right:17px; /* for ie6 3px bug */
+    width:200px;
+  }
+  .rCol {
+    float:right;
+    margin-left:20px;
+    _margin-left:17px; /* for ie6 3px bug */
+    width:200px;
+  }
+
+  .rCol-products {
+    width:170px;
+    margin-left: 0;
+  }
+}
+
+.productWrapper {
+  margin: 10px 10px 0 0;
+}
+
+

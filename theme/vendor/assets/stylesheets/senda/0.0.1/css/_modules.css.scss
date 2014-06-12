@@ -44,17 +44,20 @@
   }
 }
 
-.pageHeader {
-  font-family: "Microsoft YaHei", Arial, sans-serif;
+h1.pageHeader {
   font-weight: normal;
+  margin-top: 0;
 
   strong {
     display: block;
-    font-size: 50px;
+    font-weight: normal;
+    font-size: 60px;
     border-bottom: 1px solid $g_main;
     color: $g_main;
+    line-height: 1.2;;
 
     small {
+      font-weight: bold;
       font-size: 23px;
     }
   }
@@ -66,7 +69,7 @@
 
     .pageHeader_breadcrumb {
       float: right;
-      margin-top: 20px;
+      margin: 20px 15px 0 0;
       font-size: 12px;
     }
     small {
@@ -75,3 +78,93 @@
     }
   }
 }
+
+dl.sideNav {
+  dt, dd a {
+    padding: 10px 15px;
+  }
+  dt {
+    background: $g_main;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  dd {
+    margin: 0;
+    a {
+      display: block;
+      margin-left: 15px;
+      color: #666;
+
+      &:hover {
+        color: #222;
+      }
+    }
+  }
+}
+
+.imgResponsive {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.shadowHr {
+  background: image-url($path+'images/shadow.png') 0 0 no-repeat;
+  // background: inline-image('senda/shadow.png') 0 0 no-repeat;
+  // background: url(images/shadow.png) 0 0 no-repeat;
+  width: 697px;
+  height: 7px;
+  margin: 30px auto 40px;
+}
+
+.pagination {
+  margin: 15px 0 20px;
+  text-align: center;
+
+  span, a {
+    margin: 0 10px;
+  }
+  span {
+    color: $g_main;
+  }
+  a.pagination_btn {
+    display: inline-block;
+    line-height: 1;
+    padding: 5px;
+    font-size: 12px;
+    background: #606060;
+    color: #fff;
+
+    &:hover {
+      background: $g_main;
+    }
+  }
+}
+
+.box {
+  .box_hd {
+    // background: $g_main;
+    background: #333;
+    margin-left: -10px;
+    padding-left: 15px;
+    line-height: 40px;
+    color: #fff;
+    position: relative;
+
+    span.box_hd_shadow {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 40px;
+      width: 10px;
+      height: 5px;
+      background: #000;
+    }
+  }
+  .box_bd {
+    border: 1px solid #d8d8d8;
+    border-top: none;
+  }
+}
+

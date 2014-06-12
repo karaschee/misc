@@ -1,13 +1,72 @@
-<h1 class="pageHeader">
-  <strong>
-    PRODUCTS
-    <small>产品展示</small>
-  </strong>
-  <i>
-    <span class="pageHeader_breadcrumb">
-      <a href="#">首页</a> - 产品展示
-    </span>
-    Series
-    <small>系列分类</small>
-  </i>
-</h1>
+
+
+<div class="layout">
+  <div class="rCol rCol-products">
+    <dl class="sideNav">
+      <dt>系列分类</dt>
+      <dd> <a href="#">家居饰品</a> </dd>
+      <dd> <a href="#">自在空间</a> </dd>
+      <dd> <a href="#">如是 中国家</a> </dd>
+      <dd> <a href="#">古诺凡希 现代</a> </dd>
+    </dl>
+
+    <dl class="sideNav">
+      <dt>空间分类</dt>
+      <dd> <a href="#">客厅</a> </dd>
+      <dd> <a href="#">书房</a> </dd>
+      <dd> <a href="#">卧室</a> </dd>
+      <dd> <a href="#">餐厅</a> </dd>
+    </dl>
+  </div>
+
+  <div class="main main-products">
+    <h1 class="pageHeader">
+      <strong>
+        PRODUCTS
+        <small>产品展示</small>
+      </strong>
+      <i>
+        <span class="pageHeader_breadcrumb">
+          <a href="#">首页</a> - 产品展示
+        </span>
+        Series
+        <small>系列分类</small>
+      </i>
+    </h1>
+
+    <div class="productWrapper">
+      <%= image_tag "senda/1.jpg", class: "imgResponsive" %>
+
+      <div class="shadowHr"></div>
+
+      <ul class="products">
+        <li>
+          <a href="#">
+            <%= image_tag "senda/1.jpg", class: "imgResponsive" %>
+            <p>自在空间-卧室组合A</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag "senda/1.jpg", class: "imgResponsive" %>
+            <p>自在空间-卧室组合A</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag "senda/1.jpg", class: "imgResponsive" %>
+            <p>自在空间-卧室组合A</p>
+          </a>
+        </li>
+      </ul>
+
+      <div class="pagination">
+        <a class="pagination_btn" href="#">上一页</a>
+        <span>1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a class="pagination_btn" href="#">下一页</a>
+      </div>
+    </div>
+  </div>
+</div>
