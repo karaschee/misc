@@ -4,15 +4,16 @@ Theme::Application.routes.draw do
   get "senda_pc/products"
   get "senda_pc/product"
   get "senda_pc/experience"
-  get "senda/home"
-  get "senda/products"
-  get "senda/product"
-  get "senda/experience"
   get "senda_m/home"
   get "senda_m/products"
   get "senda_m/active"
   get "senda_m/story"
   get "senda_m/experience"
+  get "senda_m/city_select"
+  get "senda_m/city_list"
+  get "senda_m/city_shop"
+
+
   get 'sweet/home' => 'sweet#home'
   get 'sweet/products' => 'sweet#products'
   get 'sweet/articles' => 'sweet#articles'

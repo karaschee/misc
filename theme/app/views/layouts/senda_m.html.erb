@@ -24,6 +24,11 @@
         </li>
       </ul>
     </nav>
+    <% if content_for?(:page_header) %>
+      <h1 class="m_pageHeader">
+        <%= yield :page_header %>
+      </h1>
+    <% end %>
   <% end %>
 
   <div class="m_wrapper">
