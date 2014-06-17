@@ -3,3 +3,11 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin radiusBox {
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+}
