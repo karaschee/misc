@@ -1,0 +1,21 @@
+<h1 class="pageHeader">
+  <strong>
+    <%= title[:en] %>
+    <small><%= title[:zh] %></small>
+  </strong>
+  <i>
+    <span class="pageHeader_breadcrumb">
+      <a href="#">首页</a> 
+      <% breadcrumb.each do |item| %>
+        - 
+        <% if item.last.present? %>
+          <%= link_to item.first, item.last %>
+        <% else %>
+          <%= item.first %>
+        <% end %>
+      <% end %>
+    </span>
+    <%= sub_title[:en] %>
+    <small><%= sub_title[:zh] %></small>
+  </i>
+</h1>

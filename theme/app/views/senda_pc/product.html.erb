@@ -1,16 +1,8 @@
-<h1 class="pageHeader">
-  <strong>
-    PRODUCTS
-    <small>产品展示</small>
-  </strong>
-  <i>
-    <span class="pageHeader_breadcrumb">
-      <a href="#">首页</a> - 产品展示
-    </span>
-    Show
-    <small>细节展示</small>
-  </i>
-</h1>
+<%= render partial: "page_header", locals: { 
+  title: { zh: "产品展示", en: "PRODUCTS" }, 
+  sub_title: { zh: "细节展示", en: "Show" },
+  breadcrumb: { "产品展示" => "" }
+} %>
 
 <div class="product">
   <div class="box">
@@ -18,7 +10,7 @@
       <span class="box_hd_shadow"></span>
       自在空间-卧室组合A
     </div>
-    <div class="box_bd">
+    <div class="box_bd" style="padding: 0;">
       <%= image_tag 'senda/1.jpg' %>
     </div>
   </div>

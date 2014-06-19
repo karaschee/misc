@@ -1,2 +1,73 @@
-<h1>SendaPc#experience</h1>
-<p>Find me in app/views/senda_pc/experience.html.erb</p>
+<%= render partial: "page_header", locals: { 
+  title: { zh: "线下体验", en: "EXPERIENCE" }, 
+  sub_title: { zh: "线下体验店", en: "Store" },
+  breadcrumb: { "线下体验" => "" }
+} %>
+
+<div class="box">
+  <h2 class="box_hd">
+    <span class="box_hd_shadow"></span>
+    本地体验馆 - 成都
+  </h2>
+  <div class="box_bd">
+    <a href="#" class="button button-i button-l p_expBtn">立即体验</a>
+    <div class="media store">
+      <%= image_tag "sweet/0052_foodsense.jpg", style: "width: 160px; height: 140px;", class: "media_img" %>
+      <div class="media_desc">
+        <h2 class="store_hd">成都城北体验馆</h2> 
+        <p><strong>服务电话</strong>：028-83909920</p>
+        <p><strong>营业时间</strong>：9：00-21:00</p>
+        <p><strong>展馆地址</strong>：四川省成都市新都区大丰街道蓉北路二段成博小区3栋1号</p>
+
+        <p class="store_ft">
+          其它体验馆：<a href="#">成都锦江区体验馆</a>  |  <a href="#">成都武侯区体验馆</a>  |  <a href="#">成都武侯区体验馆</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="box2">
+  <h2 class="box2_hd">
+    森达博轩线下体验馆等待你的光临
+  </h2>
+  <div class="box2_bd" style="padding: 0;">
+    <div class="attachTab">
+      <ul>
+        <li> <a href="#">A-D</a> </li>
+        <li class="active"> <a href="#">E-H</a> </li>
+        <li> <a href="#">A-D</a> </li>
+        <li> <a href="#">A-D</a> </li>
+        <li> <a href="#">A-D</a> </li>
+        <li> <a href="#">A-D</a> </li>
+        <li> <a href="#">A-D</a> </li>
+      </ul>
+    </div>
+
+    <div class="p_cityIndex">
+      <div>
+        <dl class="cityIndex">
+          <dt>[四川]:</dt>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+        </dl>
+        <dl class="cityIndex">
+          <dt>[四川]:</dt>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+        </dl>
+        <dl class="cityIndex">
+          <dt>[四川]:</dt>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+          <dd>成都（<a href="#">3家</a>）</dd>
+        </dl>
+      </div>  
+    </div>
+  </div>
+</div>

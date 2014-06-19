@@ -143,40 +143,6 @@
   }
 }
 
-.m_button {
-  display: block;
-  width: 100%;
-  padding: 10px 20px;
-  background: #FFF;
-  border-radius: 5px;
-  border: 1px solid #E5E5E5;
-  color: #666;
-  -webkit-box-shadow: 1px 1px 2px #F5F5F5;
-  -moz-box-shadow: 1px 1px 2px #F5F5F5;
-  box-shadow: 1px 1px 2px #F5F5F5;
-  -webkit-transition: all .2s ease;
-  -moz-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
-
-  &:hover {
-    // color: #e66b00;
-    // background: #ffeae3;
-    // text-decoration: none;
-    color: #333;
-    background: #f5f5f5;
-    text-decoration: none;
-  }
-
-  &[disabled] {
-    background: #EBEBE4;
-  }
-}
-.m_button-i {
-  display: inline-block;
-  width: auto;
-}
-
 .m_selectCity {
   margin: 10px auto 10px;
   width: 90%;

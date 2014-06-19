@@ -143,12 +143,15 @@ dl.sideNav {
 }
 
 .box {
+  margin-bottom: 20px;
+
   .box_hd {
     // background: $g_main;
     background: #333;
-    margin-left: -10px;
+    margin: 0 0 0 -10px;
     padding-left: 15px;
     line-height: 40px;
+    font-size: 14px;
     color: #fff;
     position: relative;
 
@@ -165,6 +168,83 @@ dl.sideNav {
   .box_bd {
     border: 1px solid #d8d8d8;
     border-top: none;
+    padding: 15px;
   }
 }
 
+.box2 {
+  margin-bottom: 20px;
+
+  .box2_hd {
+    margin: 0;
+    line-height: 40px;
+    color: $g_main;
+    border-bottom: 1px solid $g_main;
+    font-size: 16px;
+  }
+  .box2_bd {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.store {
+  .store_hd {
+    margin: 0 0 15px;
+    font-size: 18px;
+  }
+  p {
+    margin: 0 0 3px;
+    font-size: 12px;
+  }
+  .store_ft {
+    margin-top: 15px;
+  }
+}
+
+.attachTab {
+  @extend .clearfix;
+  background: #f5f5f5;
+
+  ul {
+    @include clearlist;
+
+    li, a{
+      float: left;
+    }
+    li.active a {
+      background: #fff;
+      color: #333;
+    }
+    a {
+      padding: 10px 15px;
+      color: #666;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+}
+
+.cityIndex {
+  @extend .clearfix;
+
+  margin: 0;
+  padding: 15px;
+  font-size: 12px;
+  border-bottom: 1px dotted #eee;
+
+  dt, dd {
+    float: left;
+  }
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: 0 5px;
+  }
+  a {
+    color: $g_main;
+  }
+}
