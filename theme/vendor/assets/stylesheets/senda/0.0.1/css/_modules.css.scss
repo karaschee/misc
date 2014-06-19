@@ -248,3 +248,17 @@ dl.sideNav {
     color: $g_main;
   }
 }
+
+.storeList {
+  @extend .clearfix;
+  @include clearlist;
+
+  li {
+    float: left;
+    width: 50%;
+
+    .store {
+      padding: 10px;
+    }
+  }
+}

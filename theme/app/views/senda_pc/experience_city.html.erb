@@ -1,0 +1,33 @@
+<%= render partial: "page_header", locals: { 
+  title: { zh: "线下体验", en: "EXPERIENCE" }, 
+  sub_title: { zh: "成都线下体验馆", en: "Store" },
+  breadcrumb: { "线下体验" => "#", "成都" => "" }
+} %>
+
+<div class="box">
+  <h2 class="box_hd">
+    <span class="box_hd_shadow"></span>
+    成都线下体验馆
+  </h2>
+  <div class="box_bd">
+    <ul class="storeList">
+      <% [1,2].each do |store| %>
+        <li>
+          <div class="media store">
+            <%= image_tag "sweet/0052_foodsense.jpg", style: "width: 160px; height: 140px;", class: "media_img" %>
+            <div class="media_desc">
+              <h2 class="store_hd">成都城北体验馆</h2> 
+              <p><strong>服务电话</strong>：028-83909920</p>
+              <p><strong>营业时间</strong>：9：00-21:00</p>
+              <p><strong>展馆地址</strong>：四川省成都市新都区大丰街道蓉北路二段成博小区3栋1号</p>
+
+              <p class="store_ft">
+                <a href="#" class="button button-i">立即体验</a>
+              </p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

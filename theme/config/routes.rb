@@ -4,6 +4,9 @@ Theme::Application.routes.draw do
   get "senda_pc/products"
   get "senda_pc/product"
   get "senda_pc/experience"
+  get "senda_pc/experience_city"
+  get "senda_pc/experience_detail"
+
   get "senda_m/home"
   get "senda_m/products"
   get "senda_m/active"
