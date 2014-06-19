@@ -127,16 +127,7 @@
 
 .m_detail {
   @include radiusBox;
-  .m_detail_img {
-    height: 150px;
-    text-align: center;
-    vertical-align: center;
 
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
   h1 {
     font-size: 20px;
     margin: 10px 0;
