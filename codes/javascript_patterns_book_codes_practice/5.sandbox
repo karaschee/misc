@@ -1,0 +1,112 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>5.sandbox</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  // first 
+  // not work now
+  sandbox = function(){
+    var args = Array.prototype.slice.call(arguments),
+        modules,
+        results,
+        callback = args.slice(-1)[0]
+
+    if(args.length === 1 || args[0] === "*"){
+      modules = 'all'
+    }else if(typeof args[0] === 'string'){
+      modules = args.slice(0, -1)
+    }else {
+      modules = args[0]
+    }
+
+    if(modules === 'all'){
+      results = sandbox.modules
+    }else {
+      results = {}
+      for(var i in sandbox.modules){
+        var module = sandbox.modules[i]
+        if(sandbox.modules.hasOwnProperty(i)){
+          for(var j in modules){
+            if(i === modules[j]){
+              results[i] = module
+            }
+          }
+        }
+      }
+    }
+
+    callback(results)
+  }
+
+  // some modifies
+  sandbox = function(){
+    var args = Array.prototype.slice.call(arguments),
+        callback = args.pop(),
+        modules = args[0] && typeof args[0] === 'string' ? args : args[0],
+        results = {}
+
+    for(var i in sandbox.modules){
+      var module = sandbox.modules[i]
+      if(sandbox.modules.hasOwnProperty(i)){
+        if(typeof modules === 'undefined' || modules[0] === "*"){
+          results[i] = module()
+        }else {
+          for(var j in modules){
+            if(i === modules[j]){
+              results[i] = module()
+            }
+          }
+        }
+      }
+    }
+
+    callback(results)
+  }
+
+  // finally
+  sandbox = function(){
+    var args = Array.prototype.slice.call(arguments),
+        callback = args.pop(),
+        modules = args[0] && typeof args[0] === 'string' ? args : args[0],
+        results = {}
+
+    if(typeof modules === 'undefined' || modules[0] === "*"){
+      modules = []
+      for(var i in sandbox.modules){
+        if(sandbox.modules.hasOwnProperty(i)){
+          modules.push(i)
+        }
+      }
+    }
+
+    for(var i in modules){
+      var moduleName = modules[i]
+      results[moduleName] = sandbox.modules[moduleName]()
+    }
+
+    callback(results)
+  }
+
+
+  sandbox.modules = {}
+  sandbox.modules.ajax = function(){
+    return 'ajax'
+  }
+  sandbox.modules.dom = function(){
+    return 'dom'
+  }
+  sandbox.modules.test = function(){
+    return 'test'
+  }
+
+  sandbox('ajax', 'dom', function(box){ console.log(box) })
+  sandbox(['ajax', 'dom'], function(box){ console.log(box) })
+  sandbox('*', function(box){ console.log(box) })
+  sandbox(function(box){ console.log(box) })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>5.namespace</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var mynamespace = mynamespace || {}
+
+    mynamespace.namespace = function(name){
+      var spaces = name.split('.'),
+          parent = mynamespace,
+          i
+      if(spaces[0] === 'mynamespace'){
+        spaces = spaces.slice(1)
+      }
+      console.profile('start profile')
+      for(i in spaces){
+        var name = spaces[i]
+        if(typeof parent[name] === 'undefined'){
+          parent[name] = {}
+        }
+        parent = parent[name]
+      }
+      console.profileEnd('start profile')
+    }
+
+    mynamespace.namespace('aaa.bbb.ccc');
+    </script>
+</body>
+</html>
